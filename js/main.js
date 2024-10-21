@@ -9,8 +9,8 @@ menuBtn.addEventListener('click', () => {
 
 const menuStudentBtn = document.querySelector('.menu__list-link-rel');
 const menuStudentMobile = document.querySelector('.sub-menu');
-menuStudentBtn.addEventListener('click', () => {
-  menuStudentMobile.classList.toggle('menuStudent-open');
+menuStudentBtn.addEventListener('click', (event) => {
+  event.currentTarget.classList.toggle('open');
 });
 
 
