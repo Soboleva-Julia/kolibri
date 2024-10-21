@@ -180,6 +180,29 @@ button {
     justify-content: space-between;
 }
 
+.menu__list-item--rel {
+    position: relative;
+}
+
+.menu__list-item--rel svg {
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.menu__list-item--rel.open svg{
+    transform: rotate(0deg);
+}
+
+.menu__list-item--rel.open .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
 .menu__list-link-rel {
     position: relative;
     padding-right: 10px;
@@ -201,29 +224,16 @@ button {
 
 .sub-menu {
     position: absolute;
-    top: 48px;
+    top: 60px;
     background-color: #2D0908;
+    border: 2px solid #fff;
+    border-radius: 15px;
     padding: 13px 18px;
     transform-origin: 0 0;
     transform: rotateX(-90deg);
     transition: .3s linear;
     visibility: hidden;
     opacity: 0;
-}
-
-.header__menu-list li:hover>.sub-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: rotateX(0deg);
-}
-
-.header__menu-list li:hover .menu__list-link-rel::after {
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 5px 10px 5px;
-    border-color: transparent transparent #fff transparent;
 }
 
 .logo {
